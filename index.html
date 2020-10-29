@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="app.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class="">
+        <form>
+        <div id='logo'>
+          <img src="seccamp.jpg" />
+        </div>
+        <h3>Serverless Example</h3>
+        <h2>Welcome <span id="nick" class="nickname"></span></h2>
+        <div class='user-actions'>
+          <a id="btn-login" class="btn" href="https://seccamp2020b3-99.azurewebsites.net/.auth/login/aad" target="auth">
+            Log in
+          </a>
+          <a id="btn-logout" class="btn" href="https://seccamp2020b3-99.azurewebsites.net/.auth/logout" target="auth">
+            Logout
+          </a>
+        </div>
+        <div class='api-actions'>
+          <input type="text" size="80" name="email" id="email" placeholder="表示するユーザ(省略時はログインユーザ)"></input>
+          <button id="btn-timeline" class="btn">タイムライン表示</button>
+        </div>
+        <div class='api-actions'>
+          <input type="text" size="80" name="text" id="text"></input>
+          <button id="btn-post" class="btn">投稿</button>
+        </div>
+        <div id="message"></div>
+        <table id="messages" border>
+        </table>
+        <table style="display:none">
+            <tr id="msgtmpl"><td class="msgemail"></td><td class="msgdate"></td><td class="msgtext"></td></tr>
+        </table>
+        </form>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
