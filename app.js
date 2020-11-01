@@ -103,6 +103,7 @@ document.getElementById('btn-post').addEventListener('click', (e) => {
     },
     body: JSON.stringify({
       text: document.getElementById('text').value,
+      dest: document.getElementById('dest').value,
     }),
   })
     .then(response => response.json())
